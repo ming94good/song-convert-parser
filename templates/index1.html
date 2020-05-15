@@ -1,0 +1,50 @@
+<!doctype html> 
+    <head>
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/main.css') }}"/>
+	 <style>
+        #cover{
+        position: absolute;
+        top: 15%;
+        left: 0;
+        right: 0;
+        width: 1000px;
+        padding: 35px;
+        margin: -83px auto 0 auto;
+        background-color: #ff7575;
+        border-radius: 20px;
+        box-shadow: 0 10px 40px #ff7c7c, 0 0 0 20px #ffffffeb;
+        transform: scale(0.6);
+        font-size: 400%;
+        }
+	.button {
+    width: 115px;
+    height: 50px;
+    text-align: center;
+    }
+        </style>
+    </head>
+    
+    <body>
+      <div class="wrapper">
+          
+          <div id="cover">
+            <h1>歌號轉換器</h1>
+	    <h1>(音圓轉弘音)</h1>
+		<a class='button'  href='/index2'>切換</a>
+            <form method="get" action="{{ url_for('search1') }}">
+              <div class="tb">
+                <div class="td"><input type="number" style='font-size: 2cm' name='search1' placeholder="搜尋歌號" required></div>
+                <div class="td" id="s-cover">
+                  <button type="submit">
+                    <div id="s-circle"></div>
+                    <span></span>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+       
+        </div>
+      </div>
+  </body>
+   

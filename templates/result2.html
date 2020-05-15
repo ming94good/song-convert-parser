@@ -4,7 +4,7 @@
 	<style>
 	#cover{
 	position: absolute;
-	top: 15%;    	
+	top: 5%;    	
     	left: 0;
     	right: 0;
     	width: 1000px;
@@ -16,6 +16,11 @@
     	transform: scale(0.6);
     	font-size: 400%;
 	}
+	.button {
+    width: 115px;
+    height: 50px;
+    text-align: center;
+    }
 	</style>
     </head>
     
@@ -24,10 +29,11 @@
           
           <div id="cover">
             <h1>歌號轉換器</h1>
-	    <h1>(音圓轉弘音)</h1>
-            <form method="get" action="{{ url_for('search') }}">
+	    <h1>(弘音轉音圓)</h1>
+		<a class='button'  href='/'>切換</a>
+            <form method="get" action="{{ url_for('search2') }}">
               <div class="tb">
-                <div class="td"><input type="number" style='font-size: 2cm'  name='search' placeholder="搜尋" required></div>
+                <div class="td"><input type="number" style='font-size: 2cm'  name='search2' placeholder="搜尋歌號" required></div>
                 <div class="td" id="s-cover">
                   <button type="submit">
                     <div id="s-circle"></div>
@@ -37,7 +43,7 @@
               </div>
             </form>
  		<p style='font-size:2cm'>歌名： {{result1}}</p>
-                <p style='font-size:2cm'>弘音歌號： {{result2}}</p>
+                <p style='font-size:2cm'>音圓歌號： {{result2}}</p>
           </div>
        
         </div>
